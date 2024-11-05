@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-size: 50;
+    text-align: center;
+    margin-top: 30vh;
+    margin-bottom: 20px;
+}
+
+.convertisseur{
+
+    border: black 2px solid;
+    width: 50%;
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+    margin-left: 25%;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
