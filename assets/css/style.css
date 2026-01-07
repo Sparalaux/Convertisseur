@@ -1,23 +1,127 @@
-*{
+/* Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-h1{
-    font-size: 50;
-    text-align: center;
-    margin-top: 30vh;
-    margin-bottom: 20px;
-}
-
-.convertisseur{
-
-    border: black 2px solid;
-    width: 50%;
+/* Fond de la page */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
     display: flex;
-    align-items:center;
-    justify-content: space-evenly;
-    margin-left: 25%;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Conteneur principal */
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Titre */
+h1 {
+    color: white;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+/* Carte convertisseur */
+.convertisseur {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 900px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Champs */
+input,
+select {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Bouton */
+button {
+    padding: 10px 18px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background: #4facfe;
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #00c6fb;
+}
+
+/* Résultat */
+h2 {
+    margin-left: 15px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+#res {
+    font-weight: bold;
+    color: #4facfe;
+}
+
+
+/* Tablettes */
+@media (max-width: 900px) {
+    .convertisseur {
+        width: 90%;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+/* Téléphones */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.7rem;
+        margin-bottom: 20px;
+    }
+
+    .convertisseur {
+        flex-direction: column;
+        width: 90%;
+        padding: 20px;
+    }
+
+    input,
+    select,
+    button {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    button {
+        margin-top: 10px;
+    }
+
+    h2 {
+        margin-left: 0;
+        margin-top: 15px;
+        text-align: center;
+    }
 }
